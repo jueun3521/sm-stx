@@ -1,1 +1,44 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@700&family=Darumadrop+One&family=Gloria+Hallelujah&family=Great+Vibes&family=Konkhmer+Sleokchher&family=Merriweather&family=Montserrat:ital,wght@1,900&family=Mr+Dafoe&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300&family=Noto+Sans+Nag+Mundari:wght@400;500&family=Noto+Sans:wght@300;400;500;600&family=Pacifico&family=Satisfy&family=Sigmar&family=Signika:wght@300;400;500;600;700&family=Work+Sans&family=Yellowtail&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+ul, li{
+    list-style: none;
+}
+img{
+    border: 0;
+    vertical-align: middle;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #444;
+    line-height: 1.14; /*기본값*/
+    letter-spacing: 0; /*자간*/
+    word-break: break-all; /*자동으로 줄바꿈*/   
+}
+/* 레이아웃 */
+.wrap{
+    position: relative;
+    display: block;
+}
+.header{
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+}
