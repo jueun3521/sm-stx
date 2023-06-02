@@ -184,5 +184,30 @@ body{
     display: block;
     width: 100%;
     height: 910px;
-    background: url(../images/img_visual01.png);
+    background: url("../images/img_visual01.png") no-repeat center fixed;
+    background-size: cover;
+    margin-top: 80px;
+}
+.visual-inner{
+    position: relative;
+    display: block;
+    height: 100%;
+    padding-top: 1px;
+}
+
+.visual-slogan{
+    font-size: 70px;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 245px;
+    position: relative;
+}
+.visual-slogan::before{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -45px;
+    width: 60px;
+    height: 5px;
+    background-color: #ed1c24;
 }
