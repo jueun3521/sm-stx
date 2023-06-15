@@ -134,7 +134,7 @@ body{
 .depth2{
     position: relative;
     display: block;
-    padding: 40px;
+    padding: 40px 0;
 }
 .depth2 > li{
     position: relative;
@@ -145,7 +145,7 @@ body{
     display: block;
     color: #fff;
     font-size: 15px;
-    line-height: 1.92;
+    line-height: 1.92em;
 }
 .lang{
     position: absolute;
@@ -193,7 +193,7 @@ body{
     height: 910px;
     background: url("../images/img_visual01.png") no-repeat center fixed;
     background-size: cover;
-    margin-top: 80px;
+    margin-top: 50px;
 }
 .visual-inner{
     position: relative;
@@ -435,4 +435,179 @@ transition: opacity 0.5s, visibility 0.5s;
     height: 23px;
     background: url(../images/bg_common.png) no-repeat;
     background-position: 0px -49px;
+}
+/* 고객센터 */
+.cs{
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    display: block;
+    padding: 60px 0;
+    background-color: #f8f8f8;
+
+}
+.cs-inner{
+    position: relative;
+    display: block;
+}
+.cs-link{
+    position: relative;
+    display: block;
+    width: calc(50% - 1px);
+    height: 200px;
+    background-color: #fff;
+    padding: 50px 60px;
+}
+.cs-inner > .cs-link:first-child{
+    float: left;
+    background: #fff url(../images/bg_faq.png) no-repeat;
+    background-position: calc(100% - 5px) 50%;
+}
+.cs-inner > .cs-link:last-child{
+    float: right;
+    background: #fff url(../images/bg_custom.png) no-repeat;
+    background-position: calc(100% - 50px) 50%;
+}
+.cs-link > h3{
+    position: relative;
+    display: block;
+    color: 
+    #000;
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+.cs-link > p{
+    color: #444;
+    line-height: 25px;
+}
+/* 회사소개 */
+.about-box{
+    font-family: 'Noto Sans', sans-serif;
+    padding: 60px 0;
+    margin: 90px auto;
+    position: relative;
+    display: block;
+    width: 1200px;
+    height: 370px;
+    background: url("../images/img_about.png") no-repeat;
+    background-position: calc(100% - 10px);
+}
+.about-box > h2{
+    color: #111;
+    font-size: 44px;
+    margin: 0 0 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.about-text1 > p{
+    position: relative;
+    color: #444;
+    font-size: 21px;
+    margin: 0 0 20px;
+    margin-left: 70px;
+}
+.about-text2 > p{
+    line-height: 25px;
+    margin-left: 70px;
+    color: #444;
+    font-size: 15px;
+}
+.about-text1 > p::before{
+    position: absolute;
+    content: "";
+    background-color: #ed1c24;
+    width: 37px;
+    height: 5px;
+    top: 20px; left: -70px;
+}
+/* 아이콘박스 */
+.about-bottom{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.about-list{
+    position: relative;
+    display: inline-block;
+}
+.about-list > li{
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    display: block;
+    float: left;
+    margin-bottom: 100px;
+}
+.about-list > li > a{
+    position: relative;
+    display: block;
+    font-size: 22px;
+    color: #111;
+    font-weight: 600;
+}
+.about-list > li > a::before{
+    content: "";
+    display: block;
+    width: 110px;
+    height: 108px;
+    background: url(../images/bg_icon.png) no-repeat;
+    margin-bottom: 25px;
+
+}
+.about-list > li:nth-child(2) {
+    margin: 0px 200px;
+}
+.about-list > li:nth-child(1) > a::before{
+    background-position: 0px 0px;
+}
+.about-list > li:nth-child(2) > a::before{
+    background-position: -110px 0px;
+}
+.about-list > li:nth-child(3) > a::before{
+    background-position: -220px 0px;
+}
+/* footer */
+.footer{
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    display: block;
+    padding: 50px 0;
+    background-color: #4e4e4e;
+    color: #c3c3c3;
+}
+.footer-inner{
+    position: relative;
+    display: block;
+}
+.footer-logo{
+    position: relative;
+    display: block;
+    float: left;
+    margin-right: 130px;
+}
+.footer-info{
+    position: relative;
+    display: block;
+    float: left;
+}
+.footer-list{
+    position: relative;
+    display: block;
+}
+.footer-list > li{
+    font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    display: block;
+    font-size: 13px;
+    margin-bottom: 5px;
+
+}
+.footer-list > li > address{
+    position: relative;
+    display: block;
+    font-style: normal;float: left;
+    /* line-height: 20px; */
+}
+.footer-list > li > i{
+    position: relative;
+    display: inline-block;
 }
