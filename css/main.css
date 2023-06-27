@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@700&family=Darumadrop+One&family=Gloria+Hallelujah&family=Great+Vibes&family=Konkhmer+Sleokchher&family=Merriweather&family=Montserrat:ital,wght@1,900&family=Mr+Dafoe&family=Nanum+Gothic&family=Nanum+Myeongjo&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300&family=Noto+Sans+Nag+Mundari:wght@400;500&family=Noto+Sans:wght@300;400;500;600&family=Pacifico&family=Satisfy&family=Sigmar&family=Signika:wght@300;400;500;600;700&family=Work+Sans&family=Yellowtail&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
 *{
     margin: 0;
@@ -37,6 +38,47 @@ body{
     position: relative;
     display: block;
 }
+/* 안내창 */
+body.active{
+    overflow-y: auto ;
+}
+.modal-wrap{
+    font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
+    "Apple SD Gothic Neo", sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+.modal-main{
+    position: absolute;
+    left: 50%;
+    top: -8%;
+    transform: translateX(-50%);
+    width: 86px;
+    height: 86px;
+    border-radius: 43px;
+    border: 4px solid #fff;
+    background-color: #fbf7f4 url("../images/ham.jpg");
+    background-size: 100%;
+}
+
+.modal-nonotic{
+    padding: 80px 30px 23px 30px;
+    font-size: 18px;
+    font-weight: 700pxx;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: -1.2px;
+}
+.modal-nonotic strong{
+    color: #e31a5a;
+    background: linear-gradient(to top, #ffe400);
+}
+
 /* 가상공간만들기 */
 .clearfix::after{
     content: ""; /*가상빈공간*/
@@ -610,4 +652,78 @@ transition: opacity 0.5s, visibility 0.5s;
 .footer-list > li > i{
     position: relative;
     display: inline-block;
+}
+
+/* 탑 버튼 */
+.top-button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 999;
+}
+.top-button .chat_btn span {
+    width: 160px;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 80px;
+    background-color: white;
+    border-radius: 23px;
+    box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    text-align: center;
+    line-height: 45px;
+}
+.top-button .chat_btn:hover span {
+    display: block;
+}
+.top-button .chat_btn {
+    -webkit-animation: updown 2s infinite ease-in-out;
+    animation: updown 2s infinite ease-in-out;
+}
+.top-button .shop-btn {
+    width: 55px;
+    position: relative;
+    display: block;
+    line-height: 55px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06),
+    inset 0px 5px 10px 0 rgba(255, 255, 255, 0.14);
+    letter-spacing: 0.5px;
+}
+.top-button .top_btn {
+    position: relative;
+    display: block;
+    width: 55px;
+    line-height: 55px;
+    background: #ed1c24;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0px 3px 8px 1px rgba(0, 0, 0, 0.06);
+}
+.top-button .top_btn img {
+    transform: rotate(180deg);
+}
+.top-button .top_btn img.up {
+    transform: rotate(0deg);
+}
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
