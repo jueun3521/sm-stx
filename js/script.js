@@ -11,6 +11,23 @@ window.onload = function () {
         section.scrollIntoView({ behavior: "smooth" });
         }
     }
+    //비주얼이동버튼 스크롤 기능
+    const button = document.querySelector(".visual-bt");
+    //버튼을 클릭했을 때 스크롤 이동 함수를 실행합니다.
+    button.addEventListener("click", function(){
+        scrollToSection("#business");
+    });
+    //scrollToSection()함수를 정의합니다.
+    function scrollToSection(sectionId){
+        //sectionId로 지정된 요소를 찾아서 section 변수에 저장합니다.
+        const section = document.querySelector(sectionId);
+        //section이 존재한다면 스크롤 이동을 수행합니다.
+        if(section){
+            //부드러운 스크롤 이동을 위해서 scrollIntoView 매서드를 호출합니다.
+            section.scrollIntoView({behavior:"smooth"});
+        }
+    };
+
     // top 버튼 스크롤 기능
     const topBtn = document.getElementById("top-btn");
     topBtn.addEventListener("click", function (event) {
@@ -38,5 +55,12 @@ window.onload = function () {
         else{
             topBtnImg.classList.remove("up");
         }
-    })
+    });
+    //안내창 스크립트
+    let body = document.querySelector("body");
+    let modal = document.querySelector(".modal-wrap");
+    modal.addEventListener("click", function(){
+        modal.style.display = "none";
+        fadeOut(modal);
+    });
 };           
